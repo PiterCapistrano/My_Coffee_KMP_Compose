@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.jetbrains.kotlin.serialization)
     id("com.google.devtools.ksp")
-
+    id("kotlin-kapt")
 }
 
 kotlin {
@@ -94,6 +94,10 @@ kotlin {
             implementation(libs.firebase.auth.ktx)
             implementation(libs.firebase.firestore.ktx)
 
+            implementation(libs.hilt.android.v2511)
+            implementation(libs.androidx.hilt.navigation.fragment)
+
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -107,7 +111,6 @@ kotlin {
         dependencies {
             ksp(libs.androidx.room.compiler.v250)
         }
-
     }
 }
 
@@ -153,3 +156,4 @@ compose.desktop {
         }
     }
 }
+

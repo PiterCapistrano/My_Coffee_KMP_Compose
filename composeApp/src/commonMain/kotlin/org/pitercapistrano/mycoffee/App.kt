@@ -18,8 +18,11 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import mycoffee.composeapp.generated.resources.Res
 import mycoffee.composeapp.generated.resources.compose_multiplatform
+import org.pitercapistrano.mycoffee.view.Cart
+import org.pitercapistrano.mycoffee.view.Home
 import org.pitercapistrano.mycoffee.view.SignIn
 import org.pitercapistrano.mycoffee.view.SignUp
+import org.pitercapistrano.mycoffee.view.Splash
 
 @Composable
 @Preview
@@ -27,14 +30,22 @@ fun App() {
     MaterialTheme {
         val navController = rememberNavController()
 
-        NavHost(navController, startDestination = "signIn"){
-            composable(
-                route = "signIn"
-            ){
+        NavHost(navController, startDestination = "splash"){
+
+            composable(route = "splash"){
+                Splash(navController)
+            }
+            composable(route = "signIn"){
                 SignIn(navController)
             }
             composable(route = "signUp"){
                 SignUp(navController)
+            }
+            composable(route = "home"){
+                Home(navController)
+            }
+            composable(route = "cart"){
+                Cart(navController)
             }
         }
 
