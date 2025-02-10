@@ -74,6 +74,8 @@ kotlin {
             implementation(libs.androidx.material3)
             implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
             implementation(libs.androidx.material3.adaptive.navigation.suite)
+            implementation(libs.androidx.material.icons.extended)
+            implementation(libs.androidx.material.icons.core)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)

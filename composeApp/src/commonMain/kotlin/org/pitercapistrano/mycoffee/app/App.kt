@@ -17,6 +17,7 @@ fun App() {
     MaterialTheme {
         val navController = rememberNavController()
 
+
         NavHost(
             navController = navController,
             startDestination = Route.Splash // Inicia na tela Splash
