@@ -20,7 +20,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -31,11 +31,11 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     jvm("desktop")
 
 
-    
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -55,10 +55,10 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -71,6 +71,9 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
+            implementation(libs.androidx.material3)
+            implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
+            implementation(libs.androidx.material3.adaptive.navigation.suite)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
@@ -151,4 +154,3 @@ compose.desktop {
         }
     }
 }
-
