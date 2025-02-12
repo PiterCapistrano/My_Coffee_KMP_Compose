@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.jetbrains.kotlin.serialization)
     id("com.google.devtools.ksp")
+    id("com.google.gms.google-services")
 }
 
 kotlin {
@@ -66,6 +67,8 @@ kotlin {
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
             implementation(libs.ktor.client.okhttp)
+
+            implementation(libs.compose.ui.tooling.preview)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -94,10 +97,13 @@ kotlin {
 
             implementation(libs.bundles.ktor)
 
-            implementation(libs.play.services.location)
-            implementation(libs.firebase.auth.ktx)
-            implementation(libs.firebase.firestore.ktx)
+            implementation(libs.mvvm.core)
 
+            implementation(libs.play.services.location)
+            implementation(libs.firebase.bom)
+            implementation(libs.firebase.analytics)
+            implementation(libs.firebase.auth)
+            implementation(libs.firebase.firestore)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

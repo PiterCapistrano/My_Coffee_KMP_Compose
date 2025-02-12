@@ -12,8 +12,9 @@ androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 compose-multiplatform = "1.7.0"
-firebaseAuthKtx = "23.2.0"
-firebaseFirestoreKtx = "25.1.2"
+compose = "1.7.7"
+firebaseAuth = "2.1.0"
+firebaseBom = "33.9.0"
 junit = "4.13.2"
 koinCore = "4.0.0"
 kotlin = "2.1.10"
@@ -26,13 +27,14 @@ navigationCompose = "2.8.0-alpha10"
 koin = "4.0.0"
 ktor = "3.0.3"
 coroutines = "1.10.1"
-ksp = "2.0.21-1.0.27"
+ksp = "2.1.0-1.0.21"
 playServicesLocation = "21.3.0"
 recaptcha = "18.7.0"
 roomCompiler = "2.6.1"
 roomRuntime = "2.6.1"
 sqlite = "2.5.0-alpha13"
 room = "2.7.0-alpha13"
+mvvm-core = "0.16.1"
 
 [libraries]
 androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "materialIconsExtended" }
@@ -41,8 +43,10 @@ androidx-material3 = { module = "androidx.compose.material3:material3", version.
 androidx-material3-adaptive-navigation-suite = { module = "androidx.compose.material3:material3-adaptive-navigation-suite", version.ref = "material3AdaptiveNavigationSuite" }
 androidx-room-compiler-v250 = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 androidx-room-runtime-v261 = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
-firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
-firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "firebaseAuth" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "firebaseAuth" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -78,6 +82,11 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+
+mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mvvm-core" }
 
 
 [plugins]
